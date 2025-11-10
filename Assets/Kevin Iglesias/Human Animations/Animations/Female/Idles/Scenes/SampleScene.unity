@@ -408,7 +408,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &524506704
 BoxCollider:
@@ -431,6 +431,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &524506707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524506700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b0777e39f2f35c4fa730b9affcbd72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rb: {fileID: 524506703}
+  moveSpeed: 5
+  jumpPower: 300
 --- !u!1 &684544394
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,8 +722,8 @@ Transform:
   m_GameObject: {fileID: 1320619920}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.05, y: 2.98, z: -10.3}
-  m_LocalScale: {x: 20.718039, y: -9.082062, z: 1}
+  m_LocalPosition: {x: 0.05, y: 2.82, z: -10.8}
+  m_LocalScale: {x: 20.718039, y: 8.49, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -786,6 +801,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Human_DummyModel_F
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 1841c298173cdad4db8df8602c8f1c8d,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: bb71acfcf6de6554ab1b23bbf224d0a3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -798,6 +818,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 524506704}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1841c298173cdad4db8df8602c8f1c8d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 524506707}
   m_SourcePrefab: {fileID: 100100000, guid: 1841c298173cdad4db8df8602c8f1c8d, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

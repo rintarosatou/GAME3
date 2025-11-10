@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     public Rigidbody _rb;
     [Header("Movement Setting")]
     public float moveSpeed = 5f;
+    public float jumpPower;
     private void Awake()
     {
         Debug.Log("Awake");
@@ -21,7 +22,6 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        // “ü—ÍƒxƒNƒgƒ‹‚ð‚Ü‚Æ‚ß‚ÄŽæ“¾
         float horizontal = 0f;
         float vertical = 0f;
 
@@ -29,6 +29,10 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.S)) vertical -= 1f;
         if (Input.GetKey(KeyCode.D)) horizontal += 1f;
         if (Input.GetKey(KeyCode.A)) horizontal -= 1f;
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            _rb.AddForce(transform.up * jumpPower);
+        }
 
         Vector3 moveDir = new Vector3(horizontal, 0, vertical).normalized;
 
